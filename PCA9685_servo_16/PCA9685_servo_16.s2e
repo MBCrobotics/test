@@ -1,0 +1,21 @@
+{	"extensionName": "PCA9685_servo_16",
+	"sort":1,
+	"extensionPort": 0,
+	"firmware":"1.0.0",
+	"javascriptURL":"js/PCA9685_servo_16.js",
+	"blockSpecs": [
+
+		["w", "PCA9685初始化","run_PCA9685_servo_16",
+		{"setup":"Wire.begin();\nSerial.begin(9600);\nservo.init(0x7f);\n","inc":"#include \"PCA9685.h\"\n","def":"ServoDriver servo;\n","work":"","loop":""}],
+		
+		["w", "設置 %n 號舵機角度位置為 %n","set_PCA9685","1","50",
+		{"setup":"","inc":"","def":"","work":"servo.setAngle({0}, {1});","loop":""}]
+		
+	],
+	"menus": {
+		},
+	"values":{
+		},
+	"translators":{
+	}
+}
